@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import MainComponent from "./src/MainComponent";
+
 import { Provider } from "react-redux";
 import { Store } from "./src/redux/store";
 import Login from "./src/components/login/Login";
