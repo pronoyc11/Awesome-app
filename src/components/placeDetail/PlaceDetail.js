@@ -10,7 +10,7 @@ const PlaceDetail = (props) => {
         {props.place.item}
         </Text>
         <View>
-            <Image source={props.place.image} style={{width:"100%",height:500}} />
+            <Image source={{uri:props.place.image}} style={{width:"100%",height:500}} />
         </View>
         <View style={{alignItems:"center",}}>
             <TouchableOpacity onPress={()=>props.handleDeleteItem(props.place.key)}>

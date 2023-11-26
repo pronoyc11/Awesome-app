@@ -9,7 +9,7 @@ import {
     View,
   } from "react-native";
 import Placelist from '../placelist/Placelist';
-import InputPlace from '../inputPlace/InputPlace';
+
 import PlaceDetail from '../placeDetail/PlaceDetail';
 import { connect } from 'react-redux';
 import { addPlace, deletePlace } from '../../redux/actionCreator';
@@ -30,7 +30,7 @@ const mapDispatchToProps = dispatch =>{
 const FindPlaces = (props) => {
 
   
-    const [value, setValue] = useState("");
+   
 
    const [selectedPlace,setSelectedPlace] = useState(null);
   //   const onPressHandler = (item) => {
@@ -54,12 +54,7 @@ const FindPlaces = (props) => {
     return (
       <View style={styles.container}>
        { selectedPlace && <PlaceDetail place={selectedPlace} handleModalOff={handleModalOff} handleDeleteItem={handleDeleteItem} />}
-        <InputPlace
-          value={value}
-          placeList={props.placeList}
-          addPlace={props.addPlace}
-          setValue={setValue}
-        />
+
         <Placelist placeList={props.placeList} handleSelectedPlace={handleSelectedPlace} />
   
         {/* <Text>This is our text component,next we will look into the View component.</Text>
